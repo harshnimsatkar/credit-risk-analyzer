@@ -6,6 +6,22 @@ __pycache__/
 # C extensions
 *.so
 
+data/fraudTrain.csv
+data/fraudTest.csv
+data/creditcard.csv
+data/credit_risk.db
+data/processed_data.csv
+data/risk_scores_full.csv
+data/risk_scores.csv
+models/
+credit/
+logs/
+__pycache__/
+.ipynb_checkpoints/
+*.pkl
+*.pyc
+.env
+
 # Distribution / packaging
 .Python
 build/
@@ -156,6 +172,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+credit/
 
 # Spyder project settings
 .spyderproject
