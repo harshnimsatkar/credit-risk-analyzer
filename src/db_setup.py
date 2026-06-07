@@ -23,4 +23,4 @@ for row in conn.execute("SELECT name FROM sqlite_master WHERE type='table'").fet
     count = conn.execute(f"SELECT COUNT(*) FROM {row[0]}").fetchone()[0]
     print(row[0])
 
-connection.close()
+conn.close()
