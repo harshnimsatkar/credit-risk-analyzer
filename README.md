@@ -2,14 +2,14 @@
 
 End-to-end fraud detection system analyzing **1.85M credit card transactions** using a SQL rule engine combined with a LightGBM machine learning model. Built as a portfolio project targeting Credit & Fraud Risk analytics roles.
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-link.streamlit.app)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://credit-risk-analyzer-website.streamlit.app/)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![LightGBM](https://img.shields.io/badge/LightGBM-AUC%200.9849-green)
 ![SQL](https://img.shields.io/badge/SQL-SQLite-orange)
 
 ---
 
-## 📊 Key Results
+## Key Results
 
 | Analysis | Finding | Business Impact |
 |----------|---------|----------------|
@@ -21,7 +21,7 @@ End-to-end fraud detection system analyzing **1.85M credit card transactions** u
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 credit-risk-analyzer/
@@ -76,7 +76,7 @@ credit-risk-analyzer/
 
 ---
 
-## ⚙️ Setup & Run
+## Setup & Run
 
 ```bash
 # 1. Clone repository
@@ -84,8 +84,8 @@ git clone https://github.com/harshnimsatkar/credit-risk-analyzer.git
 cd credit-risk-analyzer
 
 # 2. Create conda environment
-conda create -n credit-risk python=3.11
-conda activate credit-risk
+conda create -n credit python=3.11
+conda activate credit
 
 # 3. Install dependencies
 pip install -r requirements.txt
@@ -103,7 +103,7 @@ streamlit run dashboard/app.py
 
 ---
 
-## 🗄️ SQL Analysis (5 Query Files)
+## SQL Analysis (5 Query Files)
 
 All SQL logic lives in `sql/` — notebooks read and visualize results.
 
@@ -117,7 +117,7 @@ All SQL logic lives in `sql/` — notebooks read and visualize results.
 
 ---
 
-## 🤖 ML Pipeline
+## ML Pipeline
 
 ```
 Raw CSV → SQLite DB → Feature Engineering → Model Training → Risk Score (0–100) → Dashboard
@@ -145,44 +145,44 @@ LightGBM caught **176 more fraud cases** and produced **70% fewer false positive
 
 ---
 
-## 🎯 Risk Tier Engine
+## Risk Tier Engine
 
 Each transaction is scored across 4 rule-based signals:
 
 | Signal | Condition | Points |
 |--------|-----------|--------|
-| 🌙 Night hour | Transaction between 10pm–3am | +1 |
-| 🏪 High risk merchant | shopping_net / misc_net / grocery_pos | +1 |
-| ⚡ High velocity | 5+ transactions within 60 minutes | +1 |
-| 💰 High amount | Transaction amount > $500 | +1 |
+| Night hour | Transaction between 10pm–3am | +1 |
+| High risk merchant | shopping_net / misc_net / grocery_pos | +1 |
+| High velocity | 5+ transactions within 60 minutes | +1 |
+| High amount | Transaction amount > $500 | +1 |
 
 **Risk tiers from combined score:**
 
 | Tier | Signals | Transactions | Fraud Rate | Avg Amount | Action |
 |------|---------|-------------|-----------|------------|--------|
-| 🔴 CRITICAL | 3–4 | 4,414 | **66.5%** | $907.61 | 🚨 Block |
-| 🟠 HIGH | 2 | 126,333 | 2.75% | $142.32 | ⚠️ Step-up auth |
-| 🟡 MEDIUM | 1 | 597,889 | 0.47% | $79.13 | 👁️ Monitor |
-| 🟢 LOW | 0 | 1,123,758 | 0.038% | $53.83 | ✅ Pass through |
+| CRITICAL | 3–4 | 4,414 | **66.5%** | $907.61 | Block |
+| HIGH | 2 | 126,333 | 2.75% | $142.32 | Step-up auth |
+| MEDIUM | 1 | 597,889 | 0.47% | $79.13 | Monitor |
+| LOW | 0 | 1,123,758 | 0.038% | $53.83 | Pass through |
 
 > CRITICAL tier is **1,750x more likely** to be fraudulent than LOW tier.
 
 ---
 
-## 📈 Dashboard Pages
+## Dashboard Pages
 
 | Page | Description |
 |------|-------------|
-| 📊 Overview | KPIs, model comparison, risk tier distribution |
-| 🕐 Time Analysis | Hourly fraud heatmap with business metrics |
-| 🏪 Merchant Risk | Category fraud rates, loss analysis, full table |
-| ⚡ Velocity Analysis | Transaction speed risk breakdown |
-| 🎯 Risk Tiers | Combined signal analysis + action recommendations |
-| 🔮 Live Risk Scorer | Enter transaction → instant fraud score + gauge chart |
+| Overview | KPIs, model comparison, risk tier distribution |
+| Time Analysis | Hourly fraud heatmap with business metrics |
+| Merchant Risk | Category fraud rates, loss analysis, full table |
+| Velocity Analysis | Transaction speed risk breakdown |
+| Risk Tiers | Combined signal analysis + action recommendations |
+| Live Risk Scorer | Enter transaction → instant fraud score + gauge chart |
 
 ---
 
-## 📸 Dashboard Screenshots
+## Dashboard Screenshots
 
 | Overview | Time Analysis |
 |----------|--------------|
@@ -194,7 +194,7 @@ Each transaction is scored across 4 rule-based signals:
 
 ---
 
-## 💼 Business Narrative
+## Business Narrative
 
 See [`reports/business_narrative.md`](reports/business_narrative.md) for full analysis.
 
@@ -206,7 +206,7 @@ See [`reports/business_narrative.md`](reports/business_narrative.md) for full an
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Tools |
 |----------|-------|
@@ -220,7 +220,7 @@ See [`reports/business_narrative.md`](reports/business_narrative.md) for full an
 
 ---
 
-## 📁 Datasets
+## Datasets
 
 | Dataset | Source | Rows | Use |
 |---------|--------|------|-----|
@@ -229,7 +229,7 @@ See [`reports/business_narrative.md`](reports/business_narrative.md) for full an
 
 ---
 
-## 🏆 Author
+## Author
 
 **Harsh Nimsatkar**  
 
